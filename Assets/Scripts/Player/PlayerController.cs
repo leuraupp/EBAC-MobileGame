@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Ebac.Core.Singleton;
+using TMPro;
 
 public class PlayerController : Singleton<PlayerController> 
 {
@@ -14,6 +15,9 @@ public class PlayerController : Singleton<PlayerController>
     public string tagToCheckEnemy = "Enemy";
     public string tagToEndLine = "EndLine";
     public bool _invencible = false;
+
+    [Header("UI")]
+    public TextMeshPro uiTextPowerUp;
 
     public GameObject endGame;
 
@@ -66,7 +70,7 @@ public class PlayerController : Singleton<PlayerController>
     }
 
     public void SetPowerUpText(string s) {
-        //uiTextPowerUp.text = s;
+        uiTextPowerUp.text = s;
     }
 
     public void PowerUpSpeedUp(float f) {
