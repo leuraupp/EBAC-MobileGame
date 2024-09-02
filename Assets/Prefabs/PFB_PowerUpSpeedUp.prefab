@@ -63,8 +63,8 @@ MonoBehaviour:
   timeToHide: 3
   graphicItem: {fileID: 228837371373066716}
   audioSource: {fileID: 0}
-  duration: 5
-  speedMultiplier: 2
+  duration: 1
+  speedMultiplier: 15
 --- !u!1 &228837371373066716
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,7 +124,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0a2a1ceeffed2d4408c6ffb202a2f6d2, type: 2}
+  - {fileID: 2100000, guid: 32ba20c04a4a3074ab8f33d6532e81ea, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

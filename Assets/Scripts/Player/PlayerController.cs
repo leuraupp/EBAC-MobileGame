@@ -13,6 +13,7 @@ public class PlayerController : Singleton<PlayerController>
     public float speed = 1f;
     public string tagToCheckEnemy = "Enemy";
     public string tagToEndLine = "EndLine";
+    public bool _invencible = false;
 
     public GameObject endGame;
 
@@ -41,13 +42,17 @@ public class PlayerController : Singleton<PlayerController>
 
     private void OnCollisionEnter(Collision collision) {
         if (collision.transform.CompareTag(tagToCheckEnemy)) {
-            EndGame();
+            if (!_invencible) {
+                EndGame();
+            }
         }
     }
 
     private void OnTriggerEnter(Collider other) {
         if (other.transform.CompareTag(tagToEndLine)) {
-            EndGame();
+            if (!_invencible) {
+                EndGame();
+            }
         }
     }
 
@@ -70,5 +75,9 @@ public class PlayerController : Singleton<PlayerController>
 
     public void ReserSpeed() {
         _currentSpeed = speed;
+    }
+
+    public void setInvencible(bool b) {
+        _invencible = b;
     }
 }
