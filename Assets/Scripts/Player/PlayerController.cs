@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Ebac.Core.Singleton;
 using TMPro;
+using DG.Tweening;
 
 public class PlayerController : Singleton<PlayerController> 
 {
@@ -14,7 +15,8 @@ public class PlayerController : Singleton<PlayerController>
     public float speed = 1f;
     public string tagToCheckEnemy = "Enemy";
     public string tagToEndLine = "EndLine";
-    public bool _invencible = false;
+    public bool invencible = false;
+    public GameObject coinCollector;
 
     [Header("UI")]
     public TextMeshPro uiTextPowerUp;
@@ -25,9 +27,12 @@ public class PlayerController : Singleton<PlayerController>
     private Vector3 _pos;
     private bool _isDead = false;
     private float _currentSpeed = 1f;
+    private Vector3 _startPosition;
+    private float animDuration;
 
     private void Start() {
         _isDead = true;
+        _startPosition = transform.position;
         ReserSpeed();
     }
 
@@ -46,7 +51,7 @@ public class PlayerController : Singleton<PlayerController>
 
     private void OnCollisionEnter(Collision collision) {
         if (collision.transform.CompareTag(tagToCheckEnemy)) {
-            if (!_invencible) {
+            if (!invencible) {
                 EndGame();
             }
         }
@@ -54,7 +59,7 @@ public class PlayerController : Singleton<PlayerController>
 
     private void OnTriggerEnter(Collider other) {
         if (other.transform.CompareTag(tagToEndLine)) {
-            if (!_invencible) {
+            if (!invencible) {
                 EndGame();
             }
         }
@@ -82,6 +87,19 @@ public class PlayerController : Singleton<PlayerController>
     }
 
     public void setInvencible(bool b) {
-        _invencible = b;
+        invencible = b;
+    }
+
+    public void ChangeHeight(float amountHeight, float duration, float animDuration, Ease ease) {
+        this.animDuration = animDuration;
+        transform.DOMoveY(_startPosition.y + amountHeight, this.animDuration).SetEase(ease);
+    }
+
+    public void ResetHeight(float animDuration, Ease ease) {
+        transform.DOMoveY(_startPosition.y, animDuration).SetEase(ease);
+    }
+
+    public void CoinCollectorSize(float sizeAmount) {
+        coinCollector.transform.localScale = Vector3.one * sizeAmount;
     }
 }

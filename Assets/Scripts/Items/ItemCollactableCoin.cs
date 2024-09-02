@@ -6,15 +6,34 @@ using DG.Tweening;
 public class ItemCollactableCoin : ItemCollactableBase
 {
     public Collider2D collider;
+    public bool collect = false;
+    public float lerp = 5f;
+    public float minDistance = 1f;
+
+    private void Start() {
+        //CoinsAnimationManager.Instance.RegisterCoin(this);
+    }
 
     protected override void Collect() {
-        base.Collect();
-        gameObject.transform.DOScaleX(-1, .3f).SetLoops(2, LoopType.Yoyo).OnComplete(() => Destroy(gameObject));
+        OnCollect();
+    }
+
+    private void Update() {
+        if (collect) {
+            transform.position = Vector3.Lerp(transform.position, PlayerController.Instance.transform.position, lerp * Time.deltaTime);
+
+            if (Vector3.Distance(transform.position, PlayerController.Instance.transform.position) < minDistance) {
+                //HideIntens();
+                Destroy(gameObject);
+            }
+        }
     }
 
     protected override void OnCollect() {
         base.OnCollect();
-        ItemManager.Instance.AddCoins();
         collider.enabled = false;
+        collect = true;
+        //PlayerController.Instance.Bounce();
+
     }
 }
