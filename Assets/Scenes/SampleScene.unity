@@ -1501,7 +1501,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 849231044}
-  m_LocalRotation: {x: 0.20534469, y: -0.050683904, z: 0.01064921, w: 0.97731847}
+  m_LocalRotation: {x: 0.20534469, y: -0.050683867, z: 0.010649202, w: 0.97731847}
   m_LocalPosition: {x: 1.04, y: 1.3299973, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1685,7 +1685,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.20534469, y: -0.050683904, z: 0.01064921, w: 0.97731847}
+  m_LocalRotation: {x: 0.20534469, y: -0.050683867, z: 0.010649202, w: 0.97731847}
   m_LocalPosition: {x: 1.04, y: 1.3299973, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2538,13 +2538,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lerpSpeed: 1
   target: {fileID: 1110072782}
-  speed: 5
+  speed: 7
   tagToCheckEnemy: Enemy
   tagToEndLine: EndLine
   invencible: 0
   coinCollector: {fileID: 31157875}
   uiTextPowerUp: {fileID: 548177925}
   endGame: {fileID: 354259301}
+  animatorManager: {fileID: 1579270814}
 --- !u!1001 &1579270812
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2602,6 +2603,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89e20167823a30d459856414377997d1, type: 3}
+--- !u!114 &1579270814 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5500698290677922793, guid: 89e20167823a30d459856414377997d1, type: 3}
+  m_PrefabInstance: {fileID: 1579270812}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 007593a720b770e4f8ceec7b0a8a5a48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1611618815
 GameObject:
   m_ObjectHideFlags: 0
@@ -3174,7 +3186,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 550369069656390593, guid: 19194ca8c7a068441a7107df98936412, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -11.4
+      value: 1.41
       objectReference: {fileID: 0}
     - target: {fileID: 550369069656390593, guid: 19194ca8c7a068441a7107df98936412, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3210,7 +3222,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 550369069656390597, guid: 19194ca8c7a068441a7107df98936412, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19194ca8c7a068441a7107df98936412, type: 3}

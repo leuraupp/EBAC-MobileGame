@@ -23,12 +23,16 @@ public class PlayerController : Singleton<PlayerController>
 
     public GameObject endGame;
 
+    [Header("Animation")]
+    public AnimatorManager animatorManager;
+
     //privates
     private Vector3 _pos;
     private bool _isDead = false;
     private float _currentSpeed = 1f;
     private Vector3 _startPosition;
     private float animDuration;
+    private float _baseSpeedtoAnimation = 7;
 
     private void Start() {
         _isDead = true;
@@ -52,7 +56,8 @@ public class PlayerController : Singleton<PlayerController>
     private void OnCollisionEnter(Collision collision) {
         if (collision.transform.CompareTag(tagToCheckEnemy)) {
             if (!invencible) {
-                EndGame();
+                MoveBack(collision.transform);
+                EndGame(AnimatorManager.AnimatorState.Dead);
             }
         }
     }
@@ -60,18 +65,24 @@ public class PlayerController : Singleton<PlayerController>
     private void OnTriggerEnter(Collider other) {
         if (other.transform.CompareTag(tagToEndLine)) {
             if (!invencible) {
-                EndGame();
+                EndGame(AnimatorManager.AnimatorState.Idle);
             }
         }
     }
 
-    public void EndGame() {
+    private void MoveBack(Transform t) {
+        t.DOMoveZ(1f, .3f).SetRelative();
+    }
+
+    public void EndGame(AnimatorManager.AnimatorState animatorState = AnimatorManager.AnimatorState.Idle) {
         _isDead = true;
         endGame.SetActive(true);
+        animatorManager.Play(animatorState);
     }
 
     public void StartGame() {
         _isDead = false;
+        animatorManager.Play(AnimatorManager.AnimatorState.Run, _currentSpeed /  _baseSpeedtoAnimation);
     }
 
     public void SetPowerUpText(string s) {
