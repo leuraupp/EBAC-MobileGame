@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Serialization;
 using UnityEngine;
+using Ebac.Core.Singleton;
 
-public class LevelManager : MonoBehaviour
+public class LevelManager : Singleton<LevelManager>
 {
     public Transform container;
 
@@ -18,7 +19,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private List<LevelPieceBase> spawnedPieces = new List<LevelPieceBase>();
     private SOLevelPieceBase currentPiecesSetup;
 
-    private void Awake() {
+    private void Start() {
         CreateLevelWithPieces();
         //SpawnLevels();
     }
@@ -29,6 +30,10 @@ public class LevelManager : MonoBehaviour
             CreateLevelWithPieces();
         }
 
+    }
+
+    public void RestartLevel() {
+        CreateLevelWithPieces();
     }
 
     private void CreateLevelWithPieces() {

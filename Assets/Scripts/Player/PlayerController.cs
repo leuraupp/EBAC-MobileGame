@@ -82,7 +82,16 @@ public class PlayerController : Singleton<PlayerController>
 
     public void StartGame() {
         _isDead = false;
+        transform.position = _startPosition;
         animatorManager.Play(AnimatorManager.AnimatorState.Run, _currentSpeed /  _baseSpeedtoAnimation);
+    }
+
+    public void RestartGame() {
+        _isDead = false;
+        transform.position = _startPosition;
+        endGame.SetActive(false);
+        LevelManager.Instance.RestartLevel();
+        animatorManager.Play(AnimatorManager.AnimatorState.Run, _currentSpeed / _baseSpeedtoAnimation);
     }
 
     public void SetPowerUpText(string s) {
