@@ -11,7 +11,7 @@ public class ItemCollactableCoin : ItemCollactableBase
     public float minDistance = 1f;
 
     private void Start() {
-        //CoinsAnimationManager.Instance.RegisterCoin(this);
+        CoinsAnimatorManager.Instance.RegisterCoin(this);
     }
 
     protected override void Collect() {
@@ -33,7 +33,7 @@ public class ItemCollactableCoin : ItemCollactableBase
         base.OnCollect();
         collider.enabled = false;
         collect = true;
-        //PlayerController.Instance.Bounce();
+        PlayerController.Instance.Bounce();
 
     }
 }

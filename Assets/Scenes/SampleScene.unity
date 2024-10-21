@@ -434,6 +434,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2a2e6107bffb2634183c5555449daf36, type: 2}
   - {fileID: 11400000, guid: ad65947d02e346e44bb5866f57478d8d, type: 2}
   spawnedPieces: []
+  scaleTime: 0.2
+  timeBetweenPieces: 0.01
+  ease: 27
 --- !u!1 &194638523
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,6 +467,7 @@ Transform:
   - {fileID: 192078815}
   - {fileID: 1809112621}
   - {fileID: 746428855}
+  - {fileID: 1058222954}
   m_Father: {fileID: 1763362720}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1515,6 +1519,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1031296380}
   m_CullTransparentMesh: 1
+--- !u!1 &1058222953
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1058222954}
+  - component: {fileID: 1058222955}
+  m_Layer: 0
+  m_Name: CoinsAnimatorManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1058222954
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058222953}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 194638524}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1058222955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058222953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f2a8d59ef392d741bbcc590772649d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coins: []
+  scaleTime: 0.2
+  timeBetweenCoins: 0.1
+  ease: 27
 --- !u!1 &1110072781
 GameObject:
   m_ObjectHideFlags: 0
@@ -1764,6 +1815,7 @@ GameObject:
   - component: {fileID: 1535471905}
   - component: {fileID: 1535471909}
   - component: {fileID: 1535471910}
+  - component: {fileID: 1535471908}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1850,6 +1902,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1535471903}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1535471908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535471903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ba806b0497e95246afc2cdd37a57d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleTime: 0.2
+  scaleBounce: 1.2
+  ease: 27
 --- !u!54 &1535471909
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1888,6 +1955,7 @@ MonoBehaviour:
   uiTextPowerUp: {fileID: 548177925}
   endGame: {fileID: 354259301}
   animatorManager: {fileID: 1579270814}
+  _bounceHelper: {fileID: 1535471908}
 --- !u!1001 &1579270812
 PrefabInstance:
   m_ObjectHideFlags: 0

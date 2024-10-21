@@ -33,6 +33,7 @@ public class PlayerController : Singleton<PlayerController>
     private Vector3 _startPosition;
     private float animDuration;
     private float _baseSpeedtoAnimation = 7;
+    [SerializeField] private BounceHelper _bounceHelper;
 
     private void Start() {
         _isDead = true;
@@ -68,6 +69,10 @@ public class PlayerController : Singleton<PlayerController>
                 EndGame(AnimatorManager.AnimatorState.Idle);
             }
         }
+    }
+
+    public void Bounce() {
+        _bounceHelper.Bounce();
     }
 
     private void MoveBack(Transform t) {
