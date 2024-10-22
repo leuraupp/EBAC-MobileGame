@@ -33,11 +33,13 @@ public class PlayerController : Singleton<PlayerController>
     private Vector3 _startPosition;
     private float animDuration;
     private float _baseSpeedtoAnimation = 7;
+    [SerializeField] private BounceHelper _bounceHelper;
 
     private void Start() {
         _isDead = true;
         _startPosition = transform.position;
         ReserSpeed();
+        StartBounce();
     }
 
     // Update is called once per frame
@@ -68,6 +70,15 @@ public class PlayerController : Singleton<PlayerController>
                 EndGame(AnimatorManager.AnimatorState.Idle);
             }
         }
+    }
+
+    private void StartBounce() {
+        transform.localScale = Vector3.zero;
+        transform.DOScale(1f, .4f).SetEase(Ease.OutBack).SetDelay(.5f);
+    }
+
+    public void Bounce(float scaleBounce) {
+        _bounceHelper.Bounce(scaleBounce);
     }
 
     private void MoveBack(Transform t) {
