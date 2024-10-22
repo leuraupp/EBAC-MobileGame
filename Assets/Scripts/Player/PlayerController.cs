@@ -39,6 +39,7 @@ public class PlayerController : Singleton<PlayerController>
         _isDead = true;
         _startPosition = transform.position;
         ReserSpeed();
+        StartBounce();
     }
 
     // Update is called once per frame
@@ -71,8 +72,13 @@ public class PlayerController : Singleton<PlayerController>
         }
     }
 
-    public void Bounce() {
-        _bounceHelper.Bounce();
+    private void StartBounce() {
+        transform.localScale = Vector3.zero;
+        transform.DOScale(1f, .4f).SetEase(Ease.OutBack).SetDelay(.5f);
+    }
+
+    public void Bounce(float scaleBounce) {
+        _bounceHelper.Bounce(scaleBounce);
     }
 
     private void MoveBack(Transform t) {

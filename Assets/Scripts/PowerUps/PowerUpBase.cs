@@ -9,6 +9,7 @@ public class PowerUpBase : ItemCollactableBase {
     protected override void Collect() {
         base.Collect();
         StartPowerUp();
+        PlayerController.Instance.Bounce(1.2f);
     }
 
     protected virtual void StartPowerUp() {

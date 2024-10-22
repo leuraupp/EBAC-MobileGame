@@ -509,6 +509,7 @@ GameObject:
   - component: {fileID: 3939791259192156210}
   - component: {fileID: 826698144508806597}
   - component: {fileID: 5047394704322350526}
+  - component: {fileID: 2051589506341614718}
   m_Layer: 0
   m_Name: Plane (1)
   m_TagString: Untagged
@@ -593,6 +594,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2051589506341614718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7751856007367089365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d2a5afae217022498fbf7123359344f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 1
+  meshRenderer: {fileID: 826698144508806597}
+  startColor: {r: 1, g: 1, b: 1, a: 1}
+  endColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &9168798366798831932
 GameObject:
   m_ObjectHideFlags: 0
@@ -1153,11 +1170,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fa65f2c09ea786458fe3277563fc2d2, type: 3}
+--- !u!23 &7906311531338666640 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 719696191405417307, guid: 5fa65f2c09ea786458fe3277563fc2d2, type: 3}
+  m_PrefabInstance: {fileID: 7224903746993517003}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &574772070318734000 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7187185949418589051, guid: 5fa65f2c09ea786458fe3277563fc2d2, type: 3}
+  m_PrefabInstance: {fileID: 7224903746993517003}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2006691217224944645 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9195559520988380622, guid: 5fa65f2c09ea786458fe3277563fc2d2, type: 3}
   m_PrefabInstance: {fileID: 7224903746993517003}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3424577132884891267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574772070318734000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d2a5afae217022498fbf7123359344f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 1
+  meshRenderer: {fileID: 7906311531338666640}
+  startColor: {r: 1, g: 1, b: 1, a: 1}
+  endColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1001 &7640364937965211816
 PrefabInstance:
   m_ObjectHideFlags: 0

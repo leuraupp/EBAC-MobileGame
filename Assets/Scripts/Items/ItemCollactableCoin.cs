@@ -33,7 +33,7 @@ public class ItemCollactableCoin : ItemCollactableBase
         base.OnCollect();
         collider.enabled = false;
         collect = true;
-        PlayerController.Instance.Bounce();
+        //PlayerController.Instance.Bounce(1.2f);
 
     }
 }

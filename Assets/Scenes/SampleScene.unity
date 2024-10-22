@@ -1915,7 +1915,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scaleTime: 0.2
-  scaleBounce: 1.2
   ease: 27
 --- !u!54 &1535471909
 Rigidbody:

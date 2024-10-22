@@ -38,13 +38,17 @@ public class CoinsAnimatorManager : Singleton<CoinsAnimatorManager>
     IEnumerator ScaleCoinByTime() {
         Sort();
 
-        for (int i = 0; i < coins.Count; i++) {
-            coins[i].transform.DOScale(Vector3.one, scaleTime).SetEase(ease);
-            yield return new WaitForSeconds(timeBetweenCoins);
+        if (coins != null) {
+            for (int i = 0; i < coins.Count; i++) {
+                coins[i].transform.DOScale(Vector3.one, scaleTime).SetEase(ease);
+                yield return new WaitForSeconds(timeBetweenCoins);
+            }
         }
     }
 
     private void Sort() {
-        coins = coins.OrderBy(x => Vector3.Distance(this.transform.position, x.transform.position)).ToList();
+        if (coins != null) {
+            coins = coins.OrderBy(x => Vector3.Distance(this.transform.position, x.transform.position)).ToList();
+        }
     }
 }
