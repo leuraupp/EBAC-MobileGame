@@ -84,6 +84,7 @@ public class LevelManager : Singleton<LevelManager>
             yield return new WaitForSeconds(timeBetweenPieces);
         }
 
+        CoinsAnimatorManager.Instance.CleanCoinsList();
         CoinsAnimatorManager.Instance.StartAnimation();
     }
 

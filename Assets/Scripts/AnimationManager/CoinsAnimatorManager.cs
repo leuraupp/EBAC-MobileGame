@@ -31,6 +31,10 @@ public class CoinsAnimatorManager : Singleton<CoinsAnimatorManager>
         Debug.Log("Coin registered");
     }
 
+    public void CleanCoinsList() {
+        coins.RemoveAll(coin => coin == null);
+    }
+
     public void StartAnimation() {
         StartCoroutine(ScaleCoinByTime());
     }
@@ -48,6 +52,7 @@ public class CoinsAnimatorManager : Singleton<CoinsAnimatorManager>
 
     private void Sort() {
         if (coins != null) {
+            coins.RemoveAll(coin => coin == null);
             coins = coins.OrderBy(x => Vector3.Distance(this.transform.position, x.transform.position)).ToList();
         }
     }

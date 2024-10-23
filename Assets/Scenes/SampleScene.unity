@@ -1564,7 +1564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coins: []
   scaleTime: 0.2
-  timeBetweenCoins: 0.1
+  timeBetweenCoins: 0.01
   ease: 27
 --- !u!1 &1110072781
 GameObject:
