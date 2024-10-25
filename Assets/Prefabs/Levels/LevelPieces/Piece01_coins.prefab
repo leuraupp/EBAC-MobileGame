@@ -502,6 +502,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3547710816540808740}
     m_Modifications:
+    - target: {fileID: 1583511629298537115, guid: 839962f87ee6528468746b03e65ea224, type: 3}
+      propertyPath: CollisionModule.m_Planes.Array.data[0]
+      value: 
+      objectReference: {fileID: 8216361397576749842}
     - target: {fileID: 2272749939557312451, guid: 839962f87ee6528468746b03e65ea224, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -564,6 +568,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3547710816540808740}
     m_Modifications:
+    - target: {fileID: 1583511629298537115, guid: 839962f87ee6528468746b03e65ea224, type: 3}
+      propertyPath: CollisionModule.m_Planes.Array.data[0]
+      value: 
+      objectReference: {fileID: 8216361397576749842}
     - target: {fileID: 2272749939557312451, guid: 839962f87ee6528468746b03e65ea224, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -626,6 +634,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3547710816540808740}
     m_Modifications:
+    - target: {fileID: 1583511629298537115, guid: 839962f87ee6528468746b03e65ea224, type: 3}
+      propertyPath: CollisionModule.m_Planes.Array.data[0]
+      value: 
+      objectReference: {fileID: 8216361397576749842}
     - target: {fileID: 2272749939557312451, guid: 839962f87ee6528468746b03e65ea224, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -688,6 +700,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3547710816540808740}
     m_Modifications:
+    - target: {fileID: 1583511629298537115, guid: 839962f87ee6528468746b03e65ea224, type: 3}
+      propertyPath: CollisionModule.m_Planes.Array.data[0]
+      value: 
+      objectReference: {fileID: 8216361397576749842}
     - target: {fileID: 2272749939557312451, guid: 839962f87ee6528468746b03e65ea224, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -750,6 +766,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3547710816540808740}
     m_Modifications:
+    - target: {fileID: 1583511629298537115, guid: 839962f87ee6528468746b03e65ea224, type: 3}
+      propertyPath: CollisionModule.m_Planes.Array.data[0]
+      value: 
+      objectReference: {fileID: 8216361397576749842}
     - target: {fileID: 2272749939557312451, guid: 839962f87ee6528468746b03e65ea224, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -812,6 +832,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3547710816540808740}
     m_Modifications:
+    - target: {fileID: 1583511629298537115, guid: 839962f87ee6528468746b03e65ea224, type: 3}
+      propertyPath: CollisionModule.m_Planes.Array.data[0]
+      value: 
+      objectReference: {fileID: 8216361397576749842}
     - target: {fileID: 2272749939557312451, guid: 839962f87ee6528468746b03e65ea224, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -874,6 +898,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3547710816540808740}
     m_Modifications:
+    - target: {fileID: 1583511629298537115, guid: 839962f87ee6528468746b03e65ea224, type: 3}
+      propertyPath: CollisionModule.m_Planes.Array.data[0]
+      value: 
+      objectReference: {fileID: 8216361397576749842}
     - target: {fileID: 2272749939557312451, guid: 839962f87ee6528468746b03e65ea224, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -936,6 +964,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3547710816540808740}
     m_Modifications:
+    - target: {fileID: 1583511629298537115, guid: 839962f87ee6528468746b03e65ea224, type: 3}
+      propertyPath: CollisionModule.m_Planes.Array.data[0]
+      value: 
+      objectReference: {fileID: 8216361397576749842}
     - target: {fileID: 2272749939557312451, guid: 839962f87ee6528468746b03e65ea224, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -998,6 +1030,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3547710816540808740}
     m_Modifications:
+    - target: {fileID: 1583511629298537115, guid: 839962f87ee6528468746b03e65ea224, type: 3}
+      propertyPath: CollisionModule.m_Planes.Array.data[0]
+      value: 
+      objectReference: {fileID: 8216361397576749842}
     - target: {fileID: 2272749939557312451, guid: 839962f87ee6528468746b03e65ea224, type: 3}
       propertyPath: m_RootOrder
       value: 4
